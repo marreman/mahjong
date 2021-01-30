@@ -4594,7 +4594,7 @@ var $elm$core$Dict$insert = F3(
 	});
 var $author$project$Main$emptyScore = A3(
 	$elm$core$Dict$insert,
-	'Sydan',
+	'Sunnan',
 	0,
 	A3(
 		$elm$core$Dict$insert,

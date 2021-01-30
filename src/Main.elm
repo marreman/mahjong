@@ -28,7 +28,7 @@ emptyScore =
         |> Dict.insert "Östan" 0
         |> Dict.insert "Nordan" 0
         |> Dict.insert "Västan" 0
-        |> Dict.insert "Sydan" 0
+        |> Dict.insert "Sunnan" 0
 
 
 init : Model

@@ -156,7 +156,7 @@ viewWind winner scores name points =
                 , onInput (ChangeScore name)
                 , css
                     [ fontFamily monospace
-                    , fontSize (px 16)
+                    , fontSize inherit
                     , textAlign right
                     , width (px 100)
                     ]

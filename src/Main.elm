@@ -25,15 +25,15 @@ type alias Model =
 emptyScore : Dict String Int
 emptyScore =
     Dict.empty
-        |> Dict.insert "east" 0
-        |> Dict.insert "north" 0
-        |> Dict.insert "west" 0
-        |> Dict.insert "south" 0
+        |> Dict.insert "Östan" 0
+        |> Dict.insert "Nordan" 0
+        |> Dict.insert "Västan" 0
+        |> Dict.insert "Sydan" 0
 
 
 init : Model
 init =
-    { winner = "east"
+    { winner = ""
     , winds = emptyScore
     }
 
@@ -65,8 +65,8 @@ view model =
             tr []
                 [ td [] []
                 , td [] [ text "Mahjong" ]
-                , td [] [ text "Points" ]
-                , td [] [ text "Score" ]
+                , td [] [ text "Poäng" ]
+                , td [] [ text "Resultat" ]
                 ]
 
         scores =
@@ -76,7 +76,8 @@ view model =
             Dict.map (viewWind model.winner scores) model.winds
                 |> Dict.values
     in
-    Html.table [] <| headers :: winds
+    Html.table [ css [ fontFamily monospace ] ]
+        (headers :: winds)
 
 
 calculateScores : Model -> Dict String Int
@@ -118,7 +119,7 @@ take amount from to scores =
             Debug.log "take" ( amount, from, to )
 
         amount_ =
-            if from == "east" || to == "east" then
+            if from == "Östan" || to == "Östan" then
                 amount * 2
 
             else
@@ -153,6 +154,11 @@ viewWind winner scores name points =
                         String.fromInt points
                     )
                 , onInput (ChangeScore name)
+                , css
+                    [ fontFamily monospace
+                    , textAlign right
+                    , width (px 100)
+                    ]
                 ]
                 []
             ]
@@ -161,5 +167,5 @@ viewWind winner scores name points =
             |> Maybe.withDefault ""
             |> text
             |> List.singleton
-            |> td []
+            |> td [ css [ textAlign right ] ]
         ]

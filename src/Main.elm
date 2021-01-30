@@ -62,7 +62,7 @@ view : Model -> Html Msg
 view model =
     let
         headers =
-            tr []
+            tr [ css [ fontWeight bold ] ]
                 [ td [] []
                 , td [] [ text "Mahjong" ]
                 , td [] [ text "Poäng" ]

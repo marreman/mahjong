@@ -8181,6 +8181,7 @@ var $rtfeldman$elm_css$Html$Styled$Attributes$boolProperty = F2(
 			$elm$json$Json$Encode$bool(bool));
 	});
 var $rtfeldman$elm_css$Html$Styled$Attributes$checked = $rtfeldman$elm_css$Html$Styled$Attributes$boolProperty('checked');
+var $rtfeldman$elm_css$Css$fontSize = $rtfeldman$elm_css$Css$prop1('font-size');
 var $rtfeldman$elm_css$Html$Styled$input = $rtfeldman$elm_css$Html$Styled$node('input');
 var $rtfeldman$elm_css$Html$Styled$Attributes$stringProperty = F2(
 	function (key, string) {
@@ -8385,6 +8386,8 @@ var $author$project$Main$viewWind = F4(
 									_List_fromArray(
 										[
 											$rtfeldman$elm_css$Css$fontFamily($rtfeldman$elm_css$Css$monospace),
+											$rtfeldman$elm_css$Css$fontSize(
+											$rtfeldman$elm_css$Css$px(16)),
 											$rtfeldman$elm_css$Css$textAlign($rtfeldman$elm_css$Css$right),
 											$rtfeldman$elm_css$Css$width(
 											$rtfeldman$elm_css$Css$px(100))
